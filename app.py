@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import (Flask, render_template, url_for, request)
 import sqlalchemy
 
 
@@ -7,12 +7,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<H1>Hello From Pet Adoption</H1>'
+    return render_template('index.html')
 
 
-@app.route('/adopt')
-def adopt():
-    return '<h1>Adoption Page</h1>'
+@app.route('/add-pet', methods=('Get', 'POST'))
+def add_pet():
+    print(request.form)
+    return render_template('addpet.html')
+
+
+@app.route('/pet')
+def pet():
+    return render_template('pet.html')
 
 
 if __name__ == '__main__':
