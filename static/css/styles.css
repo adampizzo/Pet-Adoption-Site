@@ -1,10 +1,10 @@
 /* Project Styles */
 
 :root {
-    --primary: #272343;
-    --secondary: #BAE8E8;
-    --accent: #FFD803;
-    --background: #FFFFFE;
+    --primary: darkblue;
+    --secondary: brown;
+    --accent: orange;
+    --background: lightgray;
 }
 
 * {
@@ -83,14 +83,30 @@ a {
 
 /* Homepage - Card Style */
 
+.pet-box {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    flex-grow: 1;
+}
+
 .card {
-    margin: auto;
-    position: relative;
+    display: flex;
+    align-content: center;
+    /* margin: auto;
+    position: relative; */
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
-    width: 292px;
-    height: 330px;
-    margin-bottom: 71px;
-    border-radius: 20px;
+    /* width: 292px; */
+    /* width: 400px;
+    height: 560px; */
+    /* margin-bottom: 71px;
+    border-radius: 20px; */
+    text-justify: center;
+    border-radius: 20px 20px 20px 20px;
+    flex-grow: 1;
+    background-color: white;
 }
 
 .card .fas {
@@ -120,13 +136,14 @@ a {
     font-weight: normal;
     font-size: 24px;
     line-height: 28px;
-    text-align: left;
-    display: inline-block;
-    margin-right: 88px;
+    text-align: center;
+    /* display: inline-block; */
+    /* margin-right: 88px;
     margin-left: 32px;
-    margin-top: 18px;
+    margin-top: 18px; */
     padding-bottom: 5px;
     border-bottom: 2px solid var(--secondary);
+    
 }
 
 .card h3 {
@@ -135,20 +152,33 @@ a {
     font-size: 18px;
     line-height: 21px;
     display: inline-block;
+    
 }
 
 .card p {
+    
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
+    /* text-align: center; */
     line-height: 16px;
-    display: block;
-    margin-left: 32px;
-    margin-top: 0px;
+    /* display: block; */
+    /* margin-left: 32px;
+    margin-top: 0px;*/
     margin-bottom: 15px;
     width: 228px;
-    height: 40px;
-    overflow: hidden;
+    /* height: 40px; */
+    /* overflow: hidden; */
+    margin: auto;
+    padding-bottom: 15px;
+    
+}
+
+.pet-box-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Form Styles */
@@ -352,7 +382,7 @@ a {
     margin-right: 5px;
 }
 
-#edit-delete a:first-child {
+#edit-delete > * {
     margin-right: 50px;
 }
 
@@ -431,6 +461,12 @@ a {
     transform: translateX(-12px) translateY(10px) rotate(135deg);
 }
 
+#not-found button {
+    background-color: var(--accent);
+    border: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
 
 
 /* Media Queries */
